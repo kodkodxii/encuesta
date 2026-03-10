@@ -815,7 +815,14 @@
     <p class="hint">Referencias, ideas, preocupaciones… todo ayuda.</p>
     <textarea class="text-area" id="q7" placeholder="Ej: Me gustaría que fuera similar a IKEA pero más personal, o quiero que se vea lujoso sin ser intimidante…" rows="5"></textarea>
 
-    <div class="divider"></div>   
+    <div class="divider"></div>
+
+    <div class="step-number" style="display:none; margin-top:0">Datos de contacto</div>
+    <p class="hint" style="margin-bottom:18px">Para enviarte un resumen de tus respuestas.</p>
+    <div style="display:grid; gap:12px;">
+      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="text" id="nombre" placeholder="Tu nombre o el nombre del negocio">
+      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="email" id="email" placeholder="Correo electrónico (opcional)">
+    </div>
 
     <div class="btn-row">
       <button class="btn-back" onclick="prevStep(7)">← Atrás</button>
