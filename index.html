@@ -817,11 +817,11 @@
 
     <div class="divider"></div>
 
-    <div class="step-number" style="display:none; margin-top:0">Datos de contacto</div>
-    <p class="hint" style="margin-bottom:18px">Para enviarte un resumen de tus respuestas.</p>
+    <div class="step-number" style="margin-top:0">&nbsp;</div>
+    <p class="hint" style="margin-bottom:18px">&nbsp;</p>
     <div style="display:grid; gap:12px;">
-      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="text" id="nombre" placeholder="Tu nombre o el nombre del negocio">
-      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="email" id="email" placeholder="Correo electrónico (opcional)">
+      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="hidden" id="nombre" placeholder="Tu nombre o el nombre del negocio">
+      <input class="text-area" style="min-height:auto;padding:14px 18px;" type="hidden" id="email" placeholder="Correo electrónico (opcional)">
     </div>
 
     <div class="btn-row">
@@ -923,7 +923,7 @@
       actualizacion: getRadio('q5'),
       imagen: getRadio('q6'),
       notas: document.getElementById('q7').value,
-      nombre: 'Cliente',
+      nombre: document.getElementById('nombre').value,
     };
 
     // Recomendación lógica
@@ -985,8 +985,8 @@
     // Reset all inputs
     document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(el => el.checked = false);
     document.getElementById('q7').value = '';
-    //document.getElementById('nombre').value = '';
-    //document.getElementById('email').value = '';
+    document.getElementById('nombre').value = '';
+    document.getElementById('email').value = '';
 
     document.getElementById('results').style.display = 'none';
     document.getElementById('step-7').classList.remove('active');
