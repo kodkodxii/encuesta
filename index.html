@@ -923,7 +923,7 @@
       actualizacion: getRadio('q5'),
       imagen: getRadio('q6'),
       notas: document.getElementById('q7').value,
-      nombre: document.getElementById('nombre').value,
+      nombre: 'Cliente',
     };
 
     // Recomendación lógica
@@ -985,8 +985,8 @@
     // Reset all inputs
     document.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(el => el.checked = false);
     document.getElementById('q7').value = '';
-    document.getElementById('nombre').value = '';
-    document.getElementById('email').value = '';
+    //document.getElementById('nombre').value = '';
+    //document.getElementById('email').value = '';
 
     document.getElementById('results').style.display = 'none';
     document.getElementById('step-7').classList.remove('active');
